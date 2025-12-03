@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(30, 30, 44);
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 25px;
+    text-align: center;
+    max-width: 2250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgb(50, 50, 70);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    background-color: rgb(50, 50, 67);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    background-color: rgb(50, 50, 70);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+}
+
+#title {
+    color: white;
+    text-align: center;
+}
+
+#learnmore {
+    background-color: rgb(32, 65, 80);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+
+#learnmore:hover {
+    background-color: rgb(28, 55, 66);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
