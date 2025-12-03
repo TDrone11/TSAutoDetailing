@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS Auto Detailing | Premium Car Care</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1e1e2c',    /* Your original dark vibe, refined */
+                            darker: '#151520',
+                            accent: '#3b82f6',  /* Electric Blue */
+                            accentHover: '#2563eb',
+                            text: '#e2e8f0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            /* Cool dark car background */
+            background-image: linear-gradient(rgba(21, 21, 32, 0.9), rgba(21, 21, 32, 0.8)), url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-brand-darker text-brand-text font-sans antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Section -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- LOGO IMAGE HERE: Replace the icon below with an <img> tag pointing to your file -->
+                    <!-- Example: <img src="TS_Auto_Logo.png" class="h-12 w-auto" alt="TS Auto Detail"> -->
+                    <div class="h-10 w-10 bg-brand-accent rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/50">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <span class="font-heading font-bold text-xl tracking-wider text-white">TS <span class="text-brand-accent">AUTO DETAILING</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-brand-accent transition-colors px-3 py-2 rounded-md font-medium">Home</a>
+                        <a href="#services" class="hover:text-brand-accent transition-colors px-3 py-2 rounded-md font-medium">Services</a>
+                        <a href="#subscription" class="hover:text-brand-accent transition-colors px-3 py-2 rounded-md font-medium">Subscriptions</a>
+                        <a href="#contracts" class="hover:text-brand-accent transition-colors px-3 py-2 rounded-md font-medium">Contracts</a>
+                        <a href="#reviews" class="hover:text-brand-accent transition-colors px-3 py-2 rounded-md font-medium">Reviews</a>
+                        <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-white px-5 py-2 rounded-full font-bold transition-all shadow-lg shadow-blue-500/30 transform hover:-translate-y-0.5">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-400 hover:text-white p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div class="hidden md:hidden bg-brand-dark border-t border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800">Home</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800">Services</a>
+                <a href="#contracts" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800">Contracts</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-brand-accent hover:bg-gray-800">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center relative text-center px-4">
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-white mb-6 drop-shadow-lg">
+                RESTORE THE <span class="text-brand-accent">SHINE</span>
+            </h1>
+            <p class="mt-4 text-xl text-gray-300 font-light mb-10">
+                Professional detailing tailored to protect your investment. Exterior, Interior, and Full Service Packages available.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-lg shadow-blue-500/40">
+                    View Services
+                </a>
+                <a href="tel:1234567890" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-dark px-8 py-4 rounded-full text-lg font-bold transition-all">
+                    Call (123) 456-7890
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-accent font-bold tracking-widest uppercase mb-2">Our Packages</h2>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-white">Choose Your Detail</h3>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- EXTERIOR BASIC -->
+                <div class="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-brand-accent transition-all hover:shadow-2xl hover:shadow-blue-900/20 group">
+                    <div class="h-12 w-12 bg-gray-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-accent transition-colors text-white">
+                        <i class="fa-solid fa-soap text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Exterior Basic</h3>
+                    <p class="text-gray-400 text-sm mb-4 h-20">
+                        Full foam, thorough hand wash, drying, tire cleaning, doorjambs, and window cleaning.
+                    </p>
+                    <div class="border-t border-gray-700 pt-4 mb-4">
+                        <div class="flex justify-between text-sm mb-1"><span>Small Cars</span> <span class="font-bold text-brand-accent">$30</span></div>
+                        <div class="flex justify-between text-sm mb-1"><span>Mid SUV</span> <span class="font-bold text-brand-accent">$40</span></div>
+                        <div class="flex justify-between text-sm"><span>Large SUV/Truck</span> <span class="font-bold text-brand-accent">$50</span></div>
+                    </div>
+                </div>
+
+                <!-- EXTERIOR PREMIUM -->
+                <div class="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-brand-accent transition-all hover:shadow-2xl hover:shadow-blue-900/20 group">
+                    <div class="h-12 w-12 bg-gray-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-accent transition-colors text-white">
+                        <i class="fa-solid fa-gem text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Exterior Premium</h3>
+                    <p class="text-gray-400 text-sm mb-4 h-20">
+                        Everything in Basic + clay bar decontamination, tire/trim dressing, iron removal, and ceramic spray sealant.
+                    </p>
+                    <div class="border-t border-gray-700 pt-4 mb-4">
+                        <div class="flex justify-between text-sm mb-1"><span>Small Cars</span> <span class="font-bold text-brand-accent">$75</span></div>
+                        <div class="flex justify-between text-sm mb-1"><span>Mid SUV</span> <span class="font-bold text-brand-accent">$95</span></div>
+                        <div class="flex justify-between text-sm"><span>Large SUV/Truck</span> <span class="font-bold text-brand-accent">$115</span></div>
+                    </div>
+                </div>
+
+                <!-- INTERIOR BASIC -->
+                <div class="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-brand-accent transition-all hover:shadow-2xl hover:shadow-blue-900/20 group">
+                    <div class="h-12 w-12 bg-gray-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-accent transition-colors text-white">
+                        <i class="fa-solid fa-broom text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Interior Basic</h3>
+                    <p class="text-gray-400 text-sm mb-4 h-20">
+                        Full vacuum, wipe-down of plastics, console cleaning, trash removal, and streak-free windows.
+                    </p>
+                    <div class="border-t border-gray-700 pt-4 mb-4">
+                        <div class="flex justify-between text-sm mb-1"><span>Small Cars</span> <span class="font-bold text-brand-accent">$50</span></div>
+                        <div class="flex justify-between text-sm mb-1"><span>Mid SUV</span> <span class="font-bold text-brand-accent">$60</span></div>
+                        <div class="flex justify-between text-sm"><span>Large SUV/Truck</span> <span class="font-bold text-brand-accent">$70</span></div>
+                    </div>
+                </div>
+
+                <!-- INTERIOR PREMIUM -->
+                <div class="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-brand-accent transition-all hover:shadow-2xl hover:shadow-blue-900/20 group">
+                    <div class="h-12 w-12 bg-gray-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-accent transition-colors text-white">
+                        <i class="fa-solid fa-couch text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Interior Premium</h3>
+                    <p class="text-gray-400 text-sm mb-4 h-20">
+                        Everything in Basic + deep clean of floor mats, leather conditioner, and applying protectant.
+                    </p>
+                    <div class="border-t border-gray-700 pt-4 mb-4">
+                        <div class="flex justify-between text-sm mb-1"><span>Small Cars</span> <span class="font-bold text-brand-accent">$50</span></div>
+                        <div class="flex justify-between text-sm mb-1"><span>Mid SUV</span> <span class="font-bold text-brand-accent">$60</span></div>
+                        <div class="flex justify-between text-sm"><span>Large SUV/Truck</span> <span class="font-bold text-brand-accent">$70</span></div>
+                    </div>
+                </div>
+
+                <!-- FULL BASIC -->
+                <div class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-6 border-2 border-brand-accent relative transform md:-translate-y-4 shadow-xl shadow-blue-900/20">
+                    <div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">BEST VALUE</div>
+                    <div class="h-12 w-12 bg-brand-accent rounded-lg flex items-center justify-center mb-4 text-white">
+                        <i class="fa-solid fa-star text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Full Basic</h3>
+                    <p class="text-gray-300 text-sm mb-4 h-20">
+                        The combination of Interior Basic and Exterior Basic. Get both services for a discounted price!
+                    </p>
+                    <div class="border-t border-gray-700 pt-4 mb-4">
+                        <div class="flex justify-between text-sm mb-1"><span>Small Cars</span> <span class="font-bold text-white">$70</span></div>
+                        <div class="flex justify-between text-sm mb-1"><span>Mid SUV</span> <span class="font-bold text-white">$80</span></div>
+                        <div class="flex justify-between text-sm"><span>Large SUV/Truck</span> <span class="font-bold text-white">$90</span></div>
+                    </div>
+                </div>
+
+                <!-- FULL PREMIUM -->
+                <div class="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-brand-accent transition-all hover:shadow-2xl hover:shadow-blue-900/20 group">
+                    <div class="h-12 w-12 bg-gray-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-accent transition-colors text-white">
+                        <i class="fa-solid fa-crown text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Full Premium</h3>
+                    <p class="text-gray-400 text-sm mb-4 h-20">
+                        The ultimate clean. Combination of Interior Premium and Exterior Premium for a total reset.
+                    </p>
+                    <div class="border-t border-gray-700 pt-4 mb-4">
+                        <div class="flex justify-between text-sm mb-1"><span>Small Cars</span> <span class="font-bold text-brand-accent">$115</span></div>
+                        <div class="flex justify-between text-sm mb-1"><span>Mid SUV</span> <span class="font-bold text-brand-accent">$135</span></div>
+                        <div class="flex justify-between text-sm"><span>Large SUV/Truck</span> <span class="font-bold text-brand-accent">$155</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ADD ONS -->
+            <div class="mt-16 bg-gray-800 rounded-xl p-8 border border-gray-700">
+                <h3 class="text-2xl font-bold text-white mb-6"><i class="fa-solid fa-plus text-brand-accent mr-2"></i> Additional Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-center justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-300">Pet Hair Removal</span>
+                        <span class="font-bold text-brand-accent">$25 - $50</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-300">Headlight Restoration</span>
+                        <span class="font-bold text-brand-accent">$50</span>
+                    </div>
+                </div>
+                <p class="mt-6 text-center text-gray-400 text-sm">
+                    Don't see what you need? Let us know! We can mix and match any services.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBSCRIPTION SECTION -->
+    <section id="subscription" class="py-16 bg-brand-darker border-y border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <i class="fa-solid fa-calendar-check text-5xl text-brand-accent mb-6"></i>
+            <h2 class="text-3xl font-heading font-bold text-white mb-4">Join Our Subscription Service</h2>
+            <p class="text-gray-400 text-lg mb-8">
+                Want a simple detail on a schedule of your choice? We offer recurring bookings so your car never loses its shine.
+            </p>
+            <a href="#contact" class="inline-block bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full border border-gray-600 transition-colors">
+                Inquire About Subscriptions
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTRACTS & DOCUMENTS SECTION (NEW) -->
+    <section id="contracts" class="py-20 bg-brand-dark relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-accent/5 rounded-full filter blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-10">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-heading font-bold mb-4">Client Contracts & Documents</h2>
+                    <p class="text-gray-400 mb-6">
+                        Transparency is key at TS Auto Detailing. Please review or sign our agreements before your appointment.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-sm text-gray-300"><i class="fa-solid fa-file-contract text-brand-accent mr-3 w-5"></i> Service Agreement</li>
+                        <li class="flex items-center text-sm text-gray-300"><i class="fa-solid fa-shield-halved text-brand-accent mr-3 w-5"></i> Liability Waiver</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-1 gap-4 w-full">
+                    <!-- Placeholder Links for Documents -->
+                    <a href="#" class="group flex items-center p-4 bg-gray-700 rounded-xl hover:bg-gray-600 transition-all border border-gray-600 hover:border-brand-accent">
+                        <div class="h-10 w-10 bg-gray-800 rounded-lg flex items-center justify-center mr-4 group-hover:bg-brand-accent transition-colors">
+                            <i class="fa-solid fa-download text-white"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-white">Download Service Contract</div>
+                            <div class="text-xs text-gray-400">PDF Format</div>
+                        </div>
+                    </a>
+                    <a href="#" class="group flex items-center p-4 bg-gray-700 rounded-xl hover:bg-gray-600 transition-all border border-gray-600 hover:border-brand-accent">
+                        <div class="h-10 w-10 bg-gray-800 rounded-lg flex items-center justify-center mr-4 group-hover:bg-brand-accent transition-colors">
+                            <i class="fa-solid fa-download text-white"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-white">Download Liability Waiver</div>
+                            <div class="text-xs text-gray-400">PDF Format</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION (NEW) -->
+    <section id="reviews" class="py-24 bg-brand-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-accent font-bold tracking-widest uppercase mb-2">Testimonials</h2>
+                <h3 class="text-3xl font-heading font-bold text-white">What Our Clients Say</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Fake Reviews for now - easy to update -->
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"My car looks better than when I bought it! The interior premium package is a lifesaver for pet owners."</p>
+                    <div class="font-bold text-white">- Alex M.</div>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"TS Auto Detailing was prompt and professional. The monthly subscription is totally worth it."</p>
+                    <div class="font-bold text-white">- Jordan K.</div>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"Highly recommended. They got stains out of my upholstery that I thought were permanent."</p>
+                    <div class="font-bold text-white">- Casey R.</div>
+                </div>
+            </div>
+
+            <!-- Review Submission Form -->
+            <div class="mt-16 max-w-2xl mx-auto bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700">
+                <h4 class="text-2xl font-heading font-bold text-white mb-6 text-center">Leave Your Review</h4>
+                <p class="text-sm text-gray-400 mb-6 text-center">Your feedback helps us shine! Please use the form below to share your experience.</p>
+                
+                <!-- NOTE: The 'action' attribute below must be changed to your actual email address -->
+                <form action="mailto:YOUR_EMAIL@example.com?subject=New%20TS%20Auto%20Detail%20Review" method="post" enctype="text/plain">
+                    <div class="space-y-4">
+                        <input type="text" name="Name" placeholder="Your Name" required class="w-full bg-gray-800 text-white border border-gray-700 focus:ring-brand-accent focus:border-brand-accent rounded-lg px-4 py-3 placeholder-gray-500">
+                        <input type="email" name="Email" placeholder="Your Email (Optional)" class="w-full bg-gray-800 text-white border border-gray-700 focus:ring-brand-accent focus:border-brand-accent rounded-lg px-4 py-3 placeholder-gray-500">
+                        <textarea name="Review" rows="4" placeholder="Your Review / Feedback" required class="w-full bg-gray-800 text-white border border-gray-700 focus:ring-brand-accent focus:border-brand-accent rounded-lg px-4 py-3 placeholder-gray-500"></textarea>
+                        
+                        <div class="flex items-center space-x-2">
+                             <!-- This checkbox ensures consent for using their review -->
+                             <input type="checkbox" id="consent" name="Consent" required class="form-checkbox h-4 w-4 text-brand-accent bg-gray-800 border-gray-700 rounded focus:ring-brand-accent">
+                             <label for="consent" class="text-xs text-gray-400">I consent to TS Auto Detailing potentially using this review on their website.</label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-3 rounded-full text-lg font-bold transition-all shadow-lg shadow-blue-500/30">
+                            Submit Review
+                        </button>
+                    </div>
+                </form>
+
+                <p class="mt-4 text-xs text-red-400 text-center font-bold">
+                    REMINDER: Change the "YOUR_EMAIL@example.com" placeholder in the code to your actual email.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <footer id="contact" class="bg-black pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="h-8 w-8 bg-brand-accent rounded-full flex items-center justify-center text-white text-sm">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <span class="font-heading font-bold text-lg tracking-wider text-white">TS <span class="text-brand-accent">AUTO DETAILING</span></span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-6 max-w-xs">
+                        TS Auto Detail LLC est. 2026. <br>
+                        Providing top-tier automotive care with convenience and quality.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-brand-accent transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-brand-accent transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-brand-accent transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-brand-accent transition-colors"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Book Now</h4>
+                    <p class="text-gray-400 mb-4">Ready to schedule? Call or text us today.</p>
+                    <div class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-phone text-brand-accent mr-2"></i> (123) 456-7890</div>
+                    <p class="text-gray-500 text-sm">Serving your local area</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-900 pt-8 text-center md:text-left">
+                <p class="text-gray-600 text-xs">&copy; 2026 TS Auto Detail LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
